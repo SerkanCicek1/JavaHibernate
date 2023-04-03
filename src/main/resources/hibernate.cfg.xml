@@ -35,6 +35,13 @@
 
         <property name="format_sql">true</property>
 
+        <!--
+        <mapping class = "com.hb05.manytoone.Student05"/>
+        <mapping class = "com.hb05.manytoone.University"/>
+        -->
+
+
+
 
     </session-factory>
 
