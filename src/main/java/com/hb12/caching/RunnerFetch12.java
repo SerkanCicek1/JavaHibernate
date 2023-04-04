@@ -16,18 +16,15 @@ public class RunnerFetch12 {
         Session session = sf.openSession();
         Transaction tx = session.beginTransaction();
 
-        System.out.println("ilk get islemi 1 id li ogrenci icin : ");
+        System.out.println("*********** ilk get islemi 1 id li ogrenci icin : ");
         Student12 student1 = session.get(Student12.class,1L);
 
-//        session.clear(); // 1.level cache etkinken bu satirla cache temizlenmis
-        // oluyor ve alttaki 2 satiri calistirdigimizda yeni query olusmak zorunda kaliyor
+//       session.clear(); // 1.level cache etkinken bu satirla cache temizlenmis
+//                    // oluyor ve alttaki 2 satiri calistirdigimizda yeni query olusmak zorunda kaliyor
 //
 //
 //        System.out.println("ikinci get islemi 1 id li ogrenci icin : ");
 //        Student12 student2 = session.get(Student12.class,1L);
-
-
-
 
         tx.commit();
         session.close();
@@ -35,7 +32,7 @@ public class RunnerFetch12 {
         Session session2 = sf.openSession();
         Transaction tx2 = session2.beginTransaction();
 
-        System.out.println("session close sonrasi get islemi 1 id li ogrenci icin : ");
+        System.out.println("*************** session close sonrasi get islemi 1 id li ogrenci icin : ");
         Student12 student3 = session2.get(Student12.class,1L);
 
 
